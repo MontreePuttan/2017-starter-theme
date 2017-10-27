@@ -21,7 +21,7 @@ if(have_posts()):
 			} else if(is_month()) {
 				echo 'Monthly Archives: '.get_the_date('F Y');
 			} else if(is_year()) {
-				echo 'Yearly Archives: '.get_the_date('Y');
+				echo 'Yearly Archives: '.get_the_date(' Y');
 			} else {
 				echo 'Archives: ';
 			}
