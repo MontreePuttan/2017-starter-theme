@@ -194,3 +194,19 @@ div.info-box p{
 	color: #333;
 	cursor: default;
 }
+
+
+/* Post Styles */
+.post h2{
+	margin-bottom:0;
+}
+
+.post-info{
+	font-size: 87%;
+	color: #999;
+}
+
+.post-info a:link,
+.post-info a:visited{
+	color: #999;
+}
