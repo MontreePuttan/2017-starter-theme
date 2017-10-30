@@ -26,7 +26,7 @@ get_header(); ?>
 						<h2>Latest Opinion</h2>
 						
 						<?php // opinion posts loop begins here
-						$opinionPosts = new WP_Query('cat=7&posts_per_page=2');
+						$opinionPosts = new WP_Query('cat=8&posts_per_page=2');
 
 						if ($opinionPosts->have_posts()) :
 
@@ -68,7 +68,7 @@ get_header(); ?>
 						<h2>Latest News</h2>
 						
 						<?php // news posts loop begins here
-						$newsPosts = new WP_Query('cat=6&posts_per_page=2');
+						$newsPosts = new WP_Query('cat=8&posts_per_page=2');
 
 						if ($newsPosts->have_posts()) :
 

@@ -199,3 +199,57 @@ function learningWordPress_customize_css() { ?>
 <?php }
 
 add_action('wp_head', 'learningWordPress_customize_css');
+
+
+// Add footer callout section to admin appreance customize screen
+function lwp_footer_callout($wp_customize){
+
+	$wp_customize->add_section('lwp-footer-callout-section', array(
+		'title' => 'Footer Callout'
+	));
+
+	$wp_customize->add_setting('lwp-footer-callout-display', array(
+		'default' => 'No'
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lwp-footer-callout-display-control', array(
+		'label' => 'Display this section?',
+		'section' => 'lwp-footer-callout-section',
+		'settings' => 'lwp-footer-callout-display',
+		'type' => 'select',
+		'choices' => array('No' => 'No','Yes' => 'Yes')
+	) ) );
+
+	$wp_customize->add_setting('lwp-footer-callout-text', array(
+		'default' => 'Example Paragraph Text!'
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lwp-footer-callout-text-control', array(
+		'label' => 'Headline',
+		'section' => 'lwp-footer-callout-section',
+		'settings' => 'lwp-footer-callout-text',
+		'type' => 'textarea'
+	) ) );
+
+	$wp_customize->add_setting('lwp-footer-callout-link');
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lwp-footer-callout-link-control', array(
+		'label' => 'Link',
+		'section' => 'lwp-footer-callout-section',
+		'settings' => 'lwp-footer-callout-link',
+		'type' => 'dropdown-pages'
+	) ) );
+
+	$wp_customize->add_setting('lwp-footer-callout-image');
+
+	$wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'lwp-footer-callout-image-control', array(
+		'label' => 'Image',
+		'section' => 'lwp-footer-callout-section',
+		'settings' => 'lwp-footer-callout-image',
+		'width' => 700,
+		'height' => 500
+	) ) );
+
+}
+
+add_action('customize_register','lwp_footer_callout');
