@@ -16,6 +16,7 @@ body {
 	font-family: Arial, sans-serif;
 	font-size: 14px;
 	color: #333;
+	background-color: #FFF;
 }
 
 a:link,
@@ -497,27 +498,124 @@ div.hd-search #s {
 }
 
 /* Footer Callout Section */
-.footer-callout{
+.footer-callout {
 	background-color: #DDD;
 	padding: 20px;
 	margin: 30px 0 0 0;
 }
 
-.footer-callout-image{
+.footer-callout-image {
 	float: left;
 	width: 30%;
+	overflow: hidden;
 }
 
-.footer-callout-text{
+.footer-callout-image img {
+	transition: all .45s ease-out;
+}
+
+.footer-callout-image img:hover {
+	opacity: .8;
+	transform: scale(1.25) rotate(5deg);
+}
+
+
+.footer-callout-text {
 	float: right;
 	width: 67%;
 }
 
-.footer-callout-text h2{
+.footer-callout-text h2 {
 	font-size: 1.7rem;
 	margin: 0 0 .35rem 0;
 }
 
-.footer-callout-text p{
+.footer-callout-text h2 a {
+	color: #333;
+	text-decoration: none;
+}
+
+.footer-callout-text h2 a:hover {
+	text-decoration: underline;
+}
+
+.footer-callout-text p {
 	font-size: .9rem;
+}
+
+/* About the Author section */
+.about-author {
+	background-color: #EDEDED;
+	padding: 20px;
+}
+
+.about-author-image {
+	float: left;
+	width: 28%;
+	position: relative;
+}
+
+.about-author-image img {
+	display: block;
+}
+
+.about-author-image p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, .5);
+	padding: 4px 0;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .85);
+	color: #FFF;
+	margin: 0;
+}
+
+.about-author-text {
+	float: right;
+	width: 68%;
+}
+
+.other-posts-by {
+	background-color: #FFF;
+	padding: 15px;
+	border-radius: 4px;
+}
+
+.other-posts-by ul {
+	margin: 0;
+	padding: 0;
+}
+
+.other-posts-by li {
+	list-style: none;
+	border-bottom: 1px dotted #DDD;
+}
+
+.other-posts-by li:last-child {
+	border-bottom: none;
+}
+
+.other-posts-by a {
+	text-decoration: none;
+	display: block;
+	padding: 3px 0;
+}
+
+/* Quick Add Form Styles */
+.admin-quick-add {
+	background-color: #DDD;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+.admin-quick-add input,
+.admin-quick-add textarea {
+	width: 100%;
+	border: none;
+	padding: 10px;
+	margin: 0 0 10px 0;
+	box-sizing: border-box;
 }
